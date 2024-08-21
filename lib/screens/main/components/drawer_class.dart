@@ -59,8 +59,10 @@ Drawer Drawer_class() {
                     children: [
                       Row(
                         children: [
-                          Text('Dart',style: TextStyle(color: Colors.white),),
-
+                          Text(
+                            'Dart',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ],
                       ),
                       LinearProgressIndicator(
