@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/screens/main/components/skills_class.dart';
 
 import '../../../util/global.dart';
+import 'all_coding_column.dart';
+import 'all_knowledge_column.dart';
+import 'all_skills_row.dart';
 import 'name_class.dart';
 
 Drawer Drawer_class() {
@@ -25,51 +28,9 @@ Drawer Drawer_class() {
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: skillsClass(end: 0.8, label: 'c'),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: skillsClass(end: 0.6, label: 'C++'),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: skillsClass(end: 0.7, label: 'Flutter'),
-                    ),
-                  ],
-                ),
-                const Divider(),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: defaultPadding),
-                  child: Text(
-                    'Coding',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                TweenAnimationBuilder(
-                  tween: Tween<double>(begin: 1, end: 0.8),
-                  duration: defaultDuration,
-                  builder: (context, double value, child) => Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text('Dart',style: TextStyle(color: Colors.white),),
-                        ],
-                      ),
-                      LinearProgressIndicator(
-                        value: value,
-                        color: primaryColor,
-                        backgroundColor: darkColor,
-                      ),
-                    ],
-                  ),
-                ),
+                allSkillsRow(),
+                allCodingColumn(),
+                allKnowledgeColumn(),
               ],
             ),
           ),
