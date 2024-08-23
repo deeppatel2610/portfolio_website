@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/screens/main/main_pega.dart';
+import 'package:portfolio_website/screens/home/home_pega.dart';
 import 'package:portfolio_website/util/global.dart';
 
 void main() {
@@ -14,12 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-     darkTheme: ThemeData.dark().copyWith(
-         primaryColor: primaryColor,
-         scaffoldBackgroundColor: bgColor,
-         canvasColor: bgColor
-    ),
-      home: const MainPega(),
+      darkTheme: ThemeData.dark().copyWith(
+          primaryColor: primaryColor,
+          scaffoldBackgroundColor: bgColor,
+          canvasColor: bgColor),
+      home: const HomePega(),
     );
   }
 }

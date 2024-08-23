@@ -5,6 +5,7 @@ import '../../../util/global.dart';
 import 'all_coding_column.dart';
 import 'all_knowledge_column.dart';
 import 'all_skills_row.dart';
+import 'download_and_icon_column.dart';
 import 'name_class.dart';
 
 Drawer Drawer_class() {
@@ -29,8 +30,12 @@ Drawer Drawer_class() {
                   ),
                 ),
                 allSkillsRow(),
+                const SizedBox(
+                  height: defaultPadding,
+                ),
                 allCodingColumn(),
                 allKnowledgeColumn(),
+                downloadAndIconColumn(),
               ],
             ),
           ),
